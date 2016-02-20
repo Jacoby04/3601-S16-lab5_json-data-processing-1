@@ -29,6 +29,11 @@
     this.$http.delete('/api/students/' + thing._id);
   }
 
+  this.sortLastName = function() {
+    $http.get('api/students/sortLastName').success(function(students) {
+      this.awesomeThings = students;
+    });
+  };
 }
 
 angular.module('3601S16Lab5JsonDataProcessingApp')
