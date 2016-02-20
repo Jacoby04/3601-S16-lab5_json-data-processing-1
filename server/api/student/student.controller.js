@@ -80,6 +80,7 @@ export function sortLastName(req, res) {
     .then(handleEntityNotFound(res))
     .then(respondWithResult(res))
     .catch(handleError(res));
+  console.log("I am trying my best!");
 }
 
 // Creates a new Student in the DB

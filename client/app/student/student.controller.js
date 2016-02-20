@@ -30,6 +30,7 @@
   }
 
   this.sortLastName = function() {
+    console.log("Me too!");
     $http.get('api/students/sortLastName').success(function(students) {
       this.awesomeThings = students;
     });
