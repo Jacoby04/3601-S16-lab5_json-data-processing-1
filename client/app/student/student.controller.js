@@ -28,6 +28,7 @@
   deleteThing(thing) {
     this.$http.delete('/api/students/' + thing._id);
   }
+
 }
 
 angular.module('3601S16Lab5JsonDataProcessingApp')
