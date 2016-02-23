@@ -10,12 +10,12 @@
   <div class="row">
     <div class="col-lg-12">
       <h4 class="page-header">Sort By:
-        <button type="button" ng-click="student.sortLastName()">Last Name</button>
+        <button type="button" ng-click="student.sort()">Last Name</button>
         <button type="button">Date of Birth</button>
         <button type="button">Credits</button>
         <button type="button">GPA</button>
       </h4>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in student.awesomeThings">
+      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in student.awesomeThings | orderBy: 'lastName'">
         <li><a href="#" tooltip="{{thing.major1}}">{{thing.lastName}}, {{thing.firstName}}</a></li>
       </ul>
     </div>

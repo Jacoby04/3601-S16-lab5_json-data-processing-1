@@ -7,6 +7,7 @@
     constructor($http, $scope, socket) {
       this.$http = $http;
       this.awesomeThings = [];
+      this.sortStatus = 'lastName';
 
       $http.get('/api/students').then(response => {
         this.awesomeThings = response.data;
@@ -29,13 +30,6 @@
     this.$http.delete('/api/students/' + thing._id);
   }
 
-  this.sortLastName = function() {
-    console.log("Me too!");
-    $http.get('api/students/sortLastName').success(function(students) {
-      this.awesomeThings = students;
-    });
-  };
-}
 
 angular.module('3601S16Lab5JsonDataProcessingApp')
   .controller('StudentCtrl', StudentController);

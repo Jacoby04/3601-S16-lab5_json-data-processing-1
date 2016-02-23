@@ -74,14 +74,6 @@ export function show(req, res) {
     .catch(handleError(res));
 }
 
-// Gets all students from the DB in order of Last Name
-export function sortLastName(req, res) {
-  Student.find().sort({lastName: 1})
-    .then(handleEntityNotFound(res))
-    .then(respondWithResult(res))
-    .catch(handleError(res));
-  console.log("I am trying my best!");
-}
 
 // Creates a new Student in the DB
 export function create(req, res) {
