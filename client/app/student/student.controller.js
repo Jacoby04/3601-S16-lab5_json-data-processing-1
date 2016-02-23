@@ -26,6 +26,13 @@
     }
   }
 
+    $scope.predicate = 'lastName';
+
+    $scope.sort(predicate) {
+    $scope.predicate = predicate;
+
+  }
+
   deleteThing(thing) {
     this.$http.delete('/api/students/' + thing._id);
   }
