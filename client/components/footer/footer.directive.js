@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('3601S16Lab5JsonDataProcessingApp')
+angular.module('newThingWeAreTestingApp')
   .directive('footer', function() {
     return {
       templateUrl: 'components/footer/footer.html',

@@ -7,17 +7,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/" class="navbar-brand">3601-s16-lab5-json-data-processing</a>
+      <a href="/" class="navbar-brand">new-thing-we-are-testing</a>
     </div>
     <div collapse="nav.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav">
         <li ng-repeat="item in nav.menu" ui-sref-active="active">
-          <a ui-sref="{{item.state}}">{{item.title}}</a>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav">
-        <li ng-repeat="item in nav.menu" ui-sref-active="active">
-          <a ui-sref="{{item.studentState}}">{{item.studentTitle}}</a>
+            <a ui-sref="{{item.state}}">{{item.title}}</a>
         </li>
       </ul>
     </div>

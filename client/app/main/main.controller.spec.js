@@ -3,7 +3,7 @@
 describe('Controller: MainController', function() {
 
   // load the controller's module
-  beforeEach(module('3601S16Lab5JsonDataProcessingApp'));
+  beforeEach(module('newThingWeAreTestingApp'));
   beforeEach(module('stateMock'));
   beforeEach(module('socketMock'));
 

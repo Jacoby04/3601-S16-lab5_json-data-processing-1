@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('3601S16Lab5JsonDataProcessingApp')
+angular.module('newThingWeAreTestingApp')
   .directive('navbar', () => ({
     templateUrl: 'components/navbar/navbar.html',
     restrict: 'E',

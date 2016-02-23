@@ -1,4 +1,4 @@
-// Generated on 2016-02-20 using generator-angular-fullstack 3.3.0
+// Generated on 2016-02-23 using generator-angular-fullstack 3.3.0
 'use strict';
 
 module.exports = function (grunt) {
@@ -303,7 +303,7 @@ module.exports = function (grunt) {
     // `server/config/environment/shared.js`
     ngconstant: {
       options: {
-        name: '3601S16Lab5JsonDataProcessingApp.constants',
+        name: 'newThingWeAreTestingApp.constants',
         dest: '<%= yeoman.client %>/app/app.constant.js',
         deps: [],
         wrap: true,
@@ -322,7 +322,7 @@ module.exports = function (grunt) {
     ngtemplates: {
       options: {
         // This should be the name of your apps angular module
-        module: '3601S16Lab5JsonDataProcessingApp',
+        module: 'newThingWeAreTestingApp',
         htmlmin: {
           collapseBooleanAttributes: true,
           collapseWhitespace: true,
@@ -518,9 +518,6 @@ module.exports = function (grunt) {
       },
       prod: {
         NODE_ENV: 'production'
-      },
-      cProd: {
-        NODE_ENV: 'customerProd'
       },
       all: localConfig
     },
@@ -777,21 +774,4 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
-
-  grunt.registerTask('customerProd', function (target) {
-    grunt.task.run([
-      'clean:server',
-      'env:all',
-      'env:cProd',
-      'concurrent:pre',
-      'concurrent:server',
-      'injector',
-      'wiredep:client',
-      'postcss',
-      'express:dev',
-      'wait',
-      'open',
-      'watch'
-    ]);
-  });
 };

@@ -41,7 +41,7 @@ export default function(app) {
     resave: false,
     store: new mongoStore({
       mongooseConnection: mongoose.connection,
-      db: '3601-s16-lab5-json-data-processing'
+      db: 'new-thing-we-are-testing'
     })
   }));
 
@@ -72,11 +72,11 @@ export default function(app) {
     app.use(morgan('dev'));
   }
 
-  if ('development' === env || 'customerProd' === env) {
+  if ('development' === env) {
     app.use(require('connect-livereload')());
   }
 
-  if ('development' === env || 'test' === env || 'customerProd' === env) {
+  if ('development' === env || 'test' === env) {
     app.use(express.static(path.join(config.root, '.tmp')));
     app.use(express.static(app.get('appPath')));
     app.use(morgan('dev'));

@@ -2,12 +2,11 @@
 
 (function() {
 
-  class StudentController {
+class StudentController {
 
     constructor($http, $scope, socket) {
       this.$http = $http;
       this.awesomeThings = [];
-      this.sortStatus = 'lastName';
 
       $http.get('/api/students').then(response => {
         this.awesomeThings = response.data;
@@ -26,19 +25,12 @@
     }
   }
 
-    $scope.predicate = 'lastName';
-
-    $scope.sort(predicate) {
-    $scope.predicate = predicate;
-
-  }
-
   deleteThing(thing) {
     this.$http.delete('/api/students/' + thing._id);
   }
 
 
-angular.module('3601S16Lab5JsonDataProcessingApp')
-  .controller('StudentCtrl', StudentController);
+angular.module('studentApp')
+  .controller('gri', StudentController);
 
 })();

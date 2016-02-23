@@ -74,7 +74,6 @@ export function show(req, res) {
     .catch(handleError(res));
 }
 
-
 // Creates a new Student in the DB
 export function create(req, res) {
   Student.createAsync(req.body)

@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('3601S16Lab5JsonDataProcessingApp.util', []);
+angular.module('newThingWeAreTestingApp.util', []);

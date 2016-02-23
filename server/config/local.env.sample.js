@@ -7,7 +7,7 @@
 
 module.exports = {
   DOMAIN:           'http://localhost:9000',
-  SESSION_SECRET:   '3601s16lab5jsondataprocessing-secret',
+  SESSION_SECRET:   'newthingwearetesting-secret',
 
   // Control debug level for modules using visionmedia/debug
   DEBUG: ''

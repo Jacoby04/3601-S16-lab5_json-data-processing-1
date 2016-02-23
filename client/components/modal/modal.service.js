@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('3601S16Lab5JsonDataProcessingApp')
+angular.module('newThingWeAreTestingApp')
   .factory('Modal', function($rootScope, $modal) {
     /**
      * Opens a modal

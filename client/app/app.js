@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('3601S16Lab5JsonDataProcessingApp', [
-  '3601S16Lab5JsonDataProcessingApp.constants',
+angular.module('newThingWeAreTestingApp', [
+  'newThingWeAreTestingApp.constants',
   'ngCookies',
   'ngResource',
   'ngSanitize',

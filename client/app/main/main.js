@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('3601S16Lab5JsonDataProcessingApp')
+angular.module('newThingWeAreTestingApp')
   .config(function($stateProvider) {
     $stateProvider
       .state('main', {

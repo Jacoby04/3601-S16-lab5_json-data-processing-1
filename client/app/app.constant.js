@@ -1,7 +1,7 @@
 (function(angular, undefined) {
 'use strict';
 
-angular.module('3601S16Lab5JsonDataProcessingApp.constants', [])
+angular.module('newThingWeAreTestingApp.constants', [])
 
 .constant('appConfig', {userRoles:['guest','user','admin']})
 

@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/devlitzi/3601-S16-lab5_json-data-processing.svg?branch=master)](https://travis-ci.org/devlitzi/3601-S16-lab5_json-data-processing)
-
 # CSCI 3601 Lab #5 - Processing JSON data from Mongo
 
 During this lab you will complete a small project for a hypothetical customer, using all of the tools you have learned in

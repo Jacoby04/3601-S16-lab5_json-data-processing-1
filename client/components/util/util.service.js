@@ -59,7 +59,7 @@ function UtilService($window) {
   return Util;
 }
 
-angular.module('3601S16Lab5JsonDataProcessingApp.util')
+angular.module('newThingWeAreTestingApp.util')
   .factory('Util', UtilService);
 
 })();

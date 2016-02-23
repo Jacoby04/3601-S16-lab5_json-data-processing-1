@@ -4,9 +4,7 @@ class NavbarController {
   //start-non-standard
   menu = [{
     'title': 'Home',
-    'state': 'main',
-    'studentTitle': 'Student',
-    'studentState': 'student'
+    'state': 'main'
   }];
 
   isCollapsed = true;
@@ -16,5 +14,5 @@ class NavbarController {
     }
 }
 
-angular.module('3601S16Lab5JsonDataProcessingApp')
+angular.module('newThingWeAreTestingApp')
   .controller('NavbarController', NavbarController);
