@@ -75,7 +75,7 @@ class MainController {
 
          }
        }
-   this.awesomeThings[i].gpa = (localGPA / localCredits).toFixed(3);
+   this.awesomeThings[i].gpa = (localGPA / localCredits).toFixed(3).toString();
      localCredits = 0;
      localGPA = 0;
  }
