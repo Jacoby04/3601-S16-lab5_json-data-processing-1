@@ -54,17 +54,20 @@ class MainController {
  calculateGPA(){
    var localCredits = 0;
    var localGPA = 0;
+   var immediateGPA = 2;
    for(var i = 0;i < this.awesomeThings.length; i++){
 
        for(var j = 0 ; j < this.awesomeThings[i].courses.length; j++){
          if(this.awesomeThings[i].courses[j].grade !== "IP") {
-           localCredits = localCredits + this.awesomeThings[i].courses[j].course.credits;
-           localGPA = localGPA + (this.awesomeThings[i].courses[j].course.credits * 4)/*this.awesemeThings[i].courses[j].grade*/;
+           localCredits = localCredits + parseInt(this.awesomeThings[i].courses[j].course.credits);
+           if(this.awesomeThings[i].courses[j].grade === "A") {immediateGPA = 4} else {immediateGPA = 2};
+           localGPA = localGPA + (parseInt(this.awesomeThings[i].courses[j].course.credits) * immediateGPA);
+
          }
        }
-       console.log(localGPA);
    this.awesomeThings[i].gpa = parseInt(localGPA / localCredits);
      localCredits = 0;
+     localGPA = 0;
  }
  return "";
  }
