@@ -37,13 +37,16 @@ class MainController {
 
   calculateCredits(){
       var localCredits = 0;
-      for(var i=0;i < this.awesomeThings.length; i++){
-        if(this.awesomeThings[i].courses.grade != "IP" && this.awesomeThings[i].courses.grade != "F") {
-          for(var j=0 ; j < this.awesomeThings[i].courses.length; j++){
-            localCredits = localCredits + this.awesomeThings[i].courses[j].course.credits;
+      for(var i = 0;i < this.awesomeThings.length; i++){
+
+          for(var j = 0 ; j < this.awesomeThings[i].courses.length; j++){
+            if(this.awesomeThings[i].courses[j].grade !== "IP" && this.awesomeThings[i].courses[j].grade !== "F") {
+              localCredits = localCredits + this.awesomeThings[i].courses[j].course.credits;
+            }
           }
-        }
+
       this.awesomeThings[i].credits = localCredits;
+        localCredits = 0;
     }
   }
 
