@@ -20,6 +20,20 @@
       <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in main.awesomeThings | orderBy: main.sortBy">
         <li><a href="#" tooltip="{{thing.gpa}}">{{thing.lastName}}, {{thing.firstName}}</a></li>
       </ul>
+      
+      <div ng-controller="repeatController">
+          Input major you wish to view:
+  <input type="search" ng-model="q" placeholder="filter major..." aria-label="filter major" />
+  <ul class="example-animate-container">
+    <li class="animate-repeat" ng-repeat="st in main.awesomeThings | filter:q as results">
+       <li><a>{{thing.lastName}}, {{thing.firstName}}</a></li>
+    </li>
+    <li class="animate-repeat" ng-if="results.length == 0">
+      <strong>No results found.</strong>
+    </li>
+  </ul>
+</div>
+      
     </div>
   </div>
 
