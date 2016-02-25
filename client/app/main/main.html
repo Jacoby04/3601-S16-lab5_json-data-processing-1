@@ -9,7 +9,7 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h4 class="page-header">Silly Students: Grades are for kids.{{main.calculateCredits()}}{{main.calculateGPA()}}{{main.combineMajors()}}</h4>
+      <h4 class="page-header">Silly Students: Grades are for kids.{{main.calculateCredits()}}{{main.calculateGPA()}}{{main.combineMajors()}}{{main.combineCompletedCourses()}}</h4>
       <h4 class="page-header"> Sort By:
       <button type="button" ng-click="main.orderThese('lastName')">Last Name</button>
       <button type="button" ng-click="main.orderThese('firstName')">First Name</button>
@@ -29,6 +29,18 @@
        {{st.lastName}}, {{st.firstName}}
     </li>
   </ul>
+</div>
+
+<div>
+    Input classes you wish to view:
+<input type="search" ng-model="search1.completedCourses" placeholder="filter courses..." aria-label="filter major" />
+<label>Completed Courses <input type="checkbox" ng-model="comp"> </label><br>
+<label>Courses In-Progress <input type="checkbox" ng-model="inprog"> </label><br>
+<ul class="example-animate-container">
+<li class="animate-repeat" ng-repeat="stu in main.awesomeThings | filter:search1">
+ {{stu.lastName}}, {{stu.firstName}}
+</li>
+</ul>
 </div>
 
     </div>

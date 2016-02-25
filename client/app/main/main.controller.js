@@ -9,6 +9,7 @@ class MainController {
     this.awesomeThings = [];
     this.sortBy = 'lastName';
 
+
     $http.get('/api/students').then(response => {
       this.awesomeThings = response.data;
       socket.syncUpdates('student', this.awesomeThings);
@@ -86,8 +87,16 @@ combineMajors(){
   var majors = "";
 
   for(var i = 0; i < this.awesomeThings.length; i++){
-    if (this.awesomeThings[i].major1 !== null) {majors = this.awesomeThings[i].major1} else {majors = "undeclared"};
-    if (this.awesomeThings[i].major2 !== null) {majors += this.awesomeThings[i].major2} else {majors += ""};
+    if (this.awesomeThings[i].major1 !== null) {
+      majors = this.awesomeThings[i].major1
+    } else {
+      majors = "undeclared"
+    };
+    if (this.awesomeThings[i].major2 !== null) {
+      majors += this.awesomeThings[i].major2
+    } else {
+        majors += ""
+      };
     this.awesomeThings[i].majors = majors;
     majors = "";
     }
@@ -108,6 +117,26 @@ combineMajors(){
 
       }
     }
+
+    combineUncompletedCourses(){
+      var uncompletedCourses = "";
+
+      for(var i = 0; i < this.awesomeThings.length; i++){
+         for(var j = 0 ; j < this.awesomeThings[i].courses.length; j++){
+            if(this.awesomeThings[i].courses[j].grade == "IP"){
+              uncompletedCourses += this.awesomeThings[i].courses[j].course.name;
+            }
+         }
+
+        this.awesomeThings[i].uncompletedCourses = uncompletedCourses;
+        uncompletedCourses = "";
+
+        }
+      }
+
+
+
+
 
 }
 
