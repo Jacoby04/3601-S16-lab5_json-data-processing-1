@@ -93,7 +93,21 @@ combineMajors(){
     }
   }
 
+  combineCompletedCourses(){
+    var completedCourses = "";
 
+    for(var i = 0; i < this.awesomeThings.length; i++){
+       for(var j = 0 ; j < this.awesomeThings[i].courses.length; j++){
+          if(this.awesomeThings[i].courses[j].grade !== "IP"){
+            completedCourses += this.awesomeThings[i].courses[j].course.name;
+          }
+       }
+
+      this.awesomeThings[i].completedCourses = completedCourses;
+      completedCourses = "";
+
+      }
+    }
 
 }
 
