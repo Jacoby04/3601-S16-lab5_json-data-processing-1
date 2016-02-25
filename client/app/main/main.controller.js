@@ -81,7 +81,17 @@ class MainController {
  }
  return "";
  }
-
+ 
+sortMajor(parameter){
+  var students = [];
+  
+  for(var i = 0; i < this.awesomeThings.length; i++){
+    if(this.awesomeThings[i].major1 == parameter || this.awesomeThings[i].major2 == parameter){
+      students.push(this.awesomeThings[i]);
+    }
+  }
+  return students;
+}
 }
 
 angular.module('newThingWeAreTestingApp')
