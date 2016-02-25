@@ -9,7 +9,7 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h4 class="page-header">Silly Students: Grades are for kids.{{main.calculateCredits()}}{{main.calculateGPA()}}</h4>
+      <h4 class="page-header">Silly Students: Grades are for kids.{{main.calculateCredits()}}{{main.calculateGPA()}}{{main.combineMajors()}}</h4>
       <h4 class="page-header"> Sort By:
       <button type="button" ng-click="main.orderThese('lastName')">Last Name</button>
       <button type="button" ng-click="main.orderThese('firstName')">First Name</button>
@@ -20,20 +20,17 @@
       <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in main.awesomeThings | orderBy: main.sortBy">
         <li><a href="#" tooltip="{{thing.gpa}}">{{thing.lastName}}, {{thing.firstName}}</a></li>
       </ul>
-      
+
       <div>
           Input major you wish to view:
-  <input type="search" ng-model="q" placeholder="filter major..." aria-label="filter major" />
+  <input type="search" ng-model="search.majors" placeholder="filter major..." aria-label="filter major" />
   <ul class="example-animate-container">
-    <li class="animate-repeat" ng-repeat="st in main.awesomeThings | filter:q as results">
-       <li><a>{{thing.lastName}}, {{thing.firstName}}</a></li>
-    </li>
-    <li class="animate-repeat" ng-if="results.length == 0">
-      <strong>No results found.</strong>
+    <li class="animate-repeat" ng-repeat="st in main.awesomeThings | filter:search">
+       {{st.lastName}}, {{st.firstName}}
     </li>
   </ul>
 </div>
-      
+
     </div>
   </div>
 

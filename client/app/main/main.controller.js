@@ -81,17 +81,20 @@ class MainController {
  }
  return "";
  }
- 
-sortMajor(parameter){
-  var students = [];
-  
+
+combineMajors(){
+  var majors = "";
+
   for(var i = 0; i < this.awesomeThings.length; i++){
-    if(this.awesomeThings[i].major1 == parameter || this.awesomeThings[i].major2 == parameter){
-      students.push(this.awesomeThings[i]);
+    if (this.awesomeThings[i].major1 !== null) {majors = this.awesomeThings[i].major1} else {majors = "undeclared"};
+    if (this.awesomeThings[i].major2 !== null) {majors += this.awesomeThings[i].major2} else {majors += ""};
+    this.awesomeThings[i].majors = majors;
+    majors = "";
     }
   }
-  return students;
-}
+
+
+
 }
 
 angular.module('newThingWeAreTestingApp')
