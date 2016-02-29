@@ -7,15 +7,17 @@
 </header>
 <head>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
       <h4 class="page-header">Silly Students: Grades are for kids.{{main.calculateCredits()}}{{main.calculateGPA()}}{{main.combineMajors()}}{{main.combineCompletedCourses()}}</h4>
-      <h4 class="page-header"> Sort By: </h4>
+      <h4 class="page-header">
+        Sort By:
+      </h4>
       <h4>
         <button type="button" ng-click="main.orderThese('lastName')">Last Name</button>
         <button type="button" ng-click="main.orderThese('firstName')">First Name</button>
@@ -25,36 +27,50 @@
       </h4>
 
       <ul class="nav nav-tabs nav-stacked" ng-repeat="thing in main.awesomeThings | orderBy: main.sortBy">
-        <li><a tooltip="{{thing.gpa}}" data-toggle="collapse" data-target="#{{thing.lastName}}">{{thing.lastName}}, {{thing.firstName}}</a></li>
+        <li>
+          <a tooltip="{{thing.gpa}}" data-toggle="collapse" data-target="#{{thing.lastName}}">{{thing.lastName}},
+            {{thing.firstName}}</a>
+        </li>
         <div id="{{thing.lastName}}" class="collapse">
-          GPA: {{thing.gpa}} <br>
-          Date of Birth: {{thing.dateOfBirth}} <br>
-          Gender: {{thing.gender}} <br>
-          Email: {{thing.email}} <br>
-          Phone: {{thing.phone}} <br>
-          Address: {{thing.address}} <br>
-          Majors: {{thing.major1}} {{thing.major2}} <br>
+          GPA: {{thing.gpa}}
+          <br>
+          Date of Birth: {{thing.dateOfBirth}}
+          <br>
+          Gender: {{thing.gender}}
+          <br>
+          Email: {{thing.email}}
+          <br>
+          Phone: {{thing.phone}}
+          <br>
+          Address: {{thing.address}}
+          <br>
+          Majors: {{thing.major1}} {{thing.major2}}
+          <br>
           <button data-toggle="collapse" data-target="#{{thing.firstName}}">Course History</button>
           <div id="{{thing.firstName}}" class="collapse">
-          <li ng-repeat="otherThing in thing.courses">
-            Course Name: {{otherThing.course.name}} <br>
-            Grade: {{otherThing.grade}} <br>
-            Credits: {{otherThing.course.credits}} <br>
-            Course Number: {{otherThing.course.number}} <br>
-            Subject: {{otherThing.course.subject}} <br>
-            <br>
-
-          </li>
-        </div>
+            <li ng-repeat="otherThing in thing.courses">
+              Course Name: {{otherThing.course.name}}
+              <br>
+              Grade: {{otherThing.grade}}
+              <br>
+              Credits: {{otherThing.course.credits}}
+              <br>
+              Course Number: {{otherThing.course.number}}
+              <br>
+              Subject: {{otherThing.course.subject}}
+              <br>
+              <br>
+            </li>
+          </div>
 
         </div>
 
       </ul>
     </div>
-    </div>
-    </div>
+  </div>
+</div>
 
-      <!--<div>
+<!--<div>
           Input major you wish to view:
   <input type="search" ng-model="search.majors" placeholder="filter major..." aria-label="filter major" />
   <ul class="example-animate-container">
