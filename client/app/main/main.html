@@ -30,9 +30,9 @@
 
       <ul class="nav nav-tabs nav-stacked animate-repeat" ng-repeat="thing in main.awesomeThings | filter: search | orderBy: main.sortBy">
         <li class="animate-repeat">
-          <a data-toggle="collapse" data-target="#{{thing.lastName}}">{{thing.lastName}}, {{thing.firstName}}</a>
+          <a data-toggle="collapse" data-target="#{{thing.lastName}}{{thing.firstName}}{{thing.dateOfBirth}}">{{thing.lastName}}, {{thing.firstName}}</a>
         </li>
-        <div id="{{thing.lastName}}" class="collapse">
+        <div id="{{thing.lastName}}{{thing.firstName}}{{thing.dateOfBirth}}" class="collapse">
           Class Rank: {{thing.rank}}
           <br>
           GPA: {{thing.gpa}}
