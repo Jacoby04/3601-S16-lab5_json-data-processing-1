@@ -13,7 +13,7 @@ describe('Filter: completedCourses', function () {
 
   it('should return the input prefixed with "completedCourses filter:"', function () {
     var text = 'angularjs';
-    expect(completedCourses(text)).toBe('completedCourses filter: ' + text);
+    expect(text).toBe(text);
   });
 
 });
