@@ -25,12 +25,12 @@
         <button type="button" ng-click="main.orderThese('-credits')">Completed Credits</button> <br>
         <input type="search" ng-model="search.majors" placeholder="filter major" aria-label="filter major" />
         <input type="search" ng-model="search.rank" placeholder="filter rank" aria-label="filter rank" />
-        <input type="search" ng-model="search.completedCourses" placeholder="filter by Courses" aria-label="filter completed courses" />
+        <input type="search" ng-model="search.completedCourses" placeholder="filter by courses" aria-label="filter completed courses" />
       </h4>
 
       <ul class="nav nav-tabs nav-stacked animate-repeat" ng-repeat="thing in main.awesomeThings | filter: search | orderBy: main.sortBy">
         <li class="animate-repeat">
-          <a tooltip="{{thing.rank}}" data-toggle="collapse" data-target="#{{thing.lastName}}">{{thing.lastName}}, {{thing.firstName}}</a>
+          <a data-toggle="collapse" data-target="#{{thing.lastName}}">{{thing.lastName}}, {{thing.firstName}}</a>
         </li>
         <div id="{{thing.lastName}}" class="collapse">
           Class Rank: {{thing.rank}}
