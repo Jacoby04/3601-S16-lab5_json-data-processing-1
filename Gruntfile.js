@@ -513,14 +513,17 @@ module.exports = function (grunt) {
     },
 
     env: {
-      test: {
-        NODE_ENV: 'test'
-      },
-      prod: {
-        NODE_ENV: 'production'
-      },
-      all: localConfig
+    test: {
+      NODE_ENV: 'test'
     },
+    prod: {
+      NODE_ENV: 'production'
+    },
+    cProd: {
+      NODE_ENV: 'customerProd'
+    },
+    all: localConfig
+  },
 
     // Compiles ES6 to JavaScript using Babel
     babel: {
@@ -774,4 +777,22 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.registerTask('customerProd', function (target) {
+    grunt.task.run([
+      'clean:server',
+      'env:all',
+      'env:cProd',
+      'concurrent:pre',
+      'concurrent:server',
+      'injector',
+      'wiredep:client',
+      'postcss',
+      'express:dev',
+      'wait',
+      'open',
+      'watch'
+    ]);
+  });
+
 };
