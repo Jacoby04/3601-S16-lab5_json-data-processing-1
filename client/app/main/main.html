@@ -10,13 +10,13 @@
   <div class="row">
     <div class="col-lg-12">
       <h4 class="page-header">Silly Students: Grades are for kids.{{main.calculateCredits()}}{{main.calculateGPA()}}{{main.combineMajors()}}{{main.combineCompletedCourses()}}</h4>
-      <h4 class="page-header"> Sort By:
+      <h4 class="page-header"> Sort By: </h4>
       <button type="button" ng-click="main.orderThese('lastName')">Last Name</button>
       <button type="button" ng-click="main.orderThese('firstName')">First Name</button>
       <button type="button" ng-click="main.orderThese('dateOfBirth')">Date of Birth</button>
       <button type="button" ng-click="main.orderThese('-credits')">Completed Credits</button>
       <button type="button" ng-click="main.orderThese('-GPA')">GPA</button>
-      <h4>
+
       <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in main.awesomeThings | orderBy: main.sortBy">
         <li><a href="#" tooltip="{{thing.gpa}}">{{thing.lastName}}, {{thing.firstName}}</a></li>
       </ul>
@@ -31,19 +31,33 @@
   </ul>
 </div>
 
+
+</div>
+
+
 <div>
     Input classes you wish to view:
 <input type="search" ng-model="search1.completedCourses" placeholder="filter courses..." aria-label="filter major" />
-<label>Completed Courses <input type="checkbox" ng-model="comp"> </label><br>
-<label>Courses In-Progress <input type="checkbox" ng-model="inprog"> </label><br>
+  <button type="button" ng-click="myFilter = {type: comp}"> Completed Courses </button>
+  <button type="button" ng-click="myFilter = {type: inprog}"> Courses In Progress </button>
+  <button type="button" ng-click="myFilter = {}"> All Courses </button>
 <ul class="example-animate-container">
 <li class="animate-repeat" ng-repeat="stu in main.awesomeThings | filter:search1">
  {{stu.lastName}}, {{stu.firstName}}
 </li>
 </ul>
-</div>
 
-    </div>
   </div>
 
+    <div>
+      <p>testing stuff</p>
+      <input type="search" ng-model="search2.completedCourses" placeholder="filter courses..." aria-label="filter major" />
+      <ul class="example-animate-container">
+        <li class="animate-repeat" ng-repeat="stu in main.awesomeThings">
+          {{stu | completedCourses}}
+        </li>
+      </ul>
+
+    </div>
+</div>
 </div>

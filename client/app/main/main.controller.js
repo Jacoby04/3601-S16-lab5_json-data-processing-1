@@ -20,6 +20,8 @@ class MainController {
     });
   }
 
+
+
   addThing() {
     if (this.newThing) {
       this.$http.post('/api/students', { name: this.newThing });
