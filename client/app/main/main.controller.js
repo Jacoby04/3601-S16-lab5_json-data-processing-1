@@ -33,11 +33,14 @@ class MainController {
     this.$http.delete('/api/students/' + thing._id);
   }
 
+//determines the parameter to be sorted by
   orderThese(parameter){
     console.log("Good job ;)");
     this.sortBy = parameter;
   }
 
+//assigns credits value for each student by looping through classes and adding up credits for each class
+//that is not in-progress or failed
   calculateCredits(){
       var localCredits = 0;
       for(var i = 0;i < this.awesomeThings.length; i++){
@@ -54,6 +57,9 @@ class MainController {
     return "";
   }
 
+//assigns GPA value for each student by looping through classes that are not in-progress
+//function converts the grades for the classes into numeric value and uses numberic grade value and credit
+//value to calculate GPA. calculateGPA then assigns localGPA to each student
  calculateGPA(){
    var localCredits = 0;
    var localGPA = 0;
@@ -85,6 +91,7 @@ class MainController {
  return "";
  }
 
+//combines major1 and major2 into one string
 combineMajors(){
   var majors = "";
 
@@ -104,6 +111,7 @@ combineMajors(){
     }
   }
 
+//determines whether student is a freshman, sophomore, junior or senior based on their credits
   defineRank(){
     for(var i = 0; i < this.awesomeThings.length; i++){
       if(this.awesomeThings[i].credits >= 0 && this.awesomeThings[i].credits < 30){
@@ -118,7 +126,8 @@ combineMajors(){
     }
     return "";
   }
-
+  
+//creates a string which includes the names of all courses not in-progress
   combineCompletedCourses(){
     var completedCourses = "";
 
@@ -135,6 +144,7 @@ combineMajors(){
       }
     }
 
+//creates a string which includes the names of all courses in-progress
     combineUncompletedCourses(){
       var uncompletedCourses = "";
 
