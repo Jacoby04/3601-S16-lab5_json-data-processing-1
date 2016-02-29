@@ -16,7 +16,8 @@ var StudentSchema = new mongoose.Schema({
   credits: String,
   gpa: String,
   majors: String,
-  completedCourses: String
+  completedCourses: String,
+  rank: String
 });
 
 export default mongoose.model('Student', StudentSchema);

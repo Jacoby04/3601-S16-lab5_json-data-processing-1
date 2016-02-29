@@ -14,7 +14,7 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h4 class="page-header">Silly Students: Grades are for kids.{{main.calculateCredits()}}{{main.calculateGPA()}}{{main.combineMajors()}}{{main.combineCompletedCourses()}}</h4>
+      <h4 class="page-header">Silly Students: Grades are for kids.{{main.calculateCredits()}}{{main.calculateGPA()}}{{main.combineMajors()}}{{main.combineCompletedCourses()}}{{main.defineRank()}}</h4>
       <h4 class="page-header">
         Sort By:
       </h4>
@@ -23,13 +23,14 @@
         <button type="button" ng-click="main.orderThese('firstName')">First Name</button>
         <button type="button" ng-click="main.orderThese('dateOfBirth')">Date of Birth</button>
         <button type="button" ng-click="main.orderThese('-credits')">Completed Credits</button>
+        <input type="search" ng-model="search.majors" placeholder="filter major" aria-label="filter major" />
+        <input type="search" ng-model="search.rank" placeholder="filter rank" aria-label="filter rank" />
         <!-- <button type="button" ng-click="main.orderThese('-GPA')">GPA</button> -->
       </h4>
 
-      <ul class="nav nav-tabs nav-stacked" ng-repeat="thing in main.awesomeThings | orderBy: main.sortBy">
-        <li>
-          <a tooltip="{{thing.gpa}}" data-toggle="collapse" data-target="#{{thing.lastName}}">{{thing.lastName}},
-            {{thing.firstName}}</a>
+      <ul class="nav nav-tabs nav-stacked animate-repeat" ng-repeat="thing in main.awesomeThings | filter: search | orderBy: main.sortBy">
+        <li class="animate-repeat">
+          <a tooltip="{{thing.rank}}" data-toggle="collapse" data-target="#{{thing.lastName}}">{{thing.lastName}}, {{thing.firstName}}</a>
         </li>
         <div id="{{thing.lastName}}" class="collapse">
           GPA: {{thing.gpa}}

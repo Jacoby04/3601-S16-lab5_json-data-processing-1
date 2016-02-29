@@ -104,6 +104,21 @@ combineMajors(){
     }
   }
 
+  defineRank(){
+    for(var i = 0; i < this.awesomeThings.length; i++){
+      if(this.awesomeThings[i].credits >= 0 && this.awesomeThings[i].credits < 50){
+        this.awesomeThings[i].rank = "Freshman";
+      } else if (this.awesomeThings[i].credits < 100 && this.awesomeThings[i].credits >= 50){
+        this.awesomeThings[i].rank = "Sophomore";
+      } else if (this.awesomeThings[i].credits < 150 && this.awesomeThings[i].credits >= 100){
+        this.awesomeThings[i].rank = "Junior";
+      } else if (this.awesomeThings[i].credits >= 150){
+        this.awesomeThings[i].rank = "Senior";
+      }
+    }
+    return "";
+  }
+
   combineCompletedCourses(){
     var completedCourses = "";
 
