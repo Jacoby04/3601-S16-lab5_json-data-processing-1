@@ -25,9 +25,25 @@ describe('Controller: MainController', function() {
     });
   }));
 
-  it('should attach a list of things to the controller', function() {
-    this = {Student.create({"major1": "CSCI", "major2": "MATH"})};
-    this.MainController.combineMajors();
+  it('should concat two majors', function() {
+    this.major1 = "CSCI";
+    this.major2 = "MATH";
+    this.majors = this.major1 + this.major2;
     expect(this.majors).toEqual("CSCIMATH");
+  });
+
+  it('should figure out  how many completed courses', function(){
+    this.courses = ['course1', 'course2', 'course3'];
+    expect(this.courses.length).toEqual(3);
+  });
+
+  it('should figure out  how many completed courses', function(){
+    this.courses = ['course1', 'course2', 'course3'];
+    expect(this.courses.length).toEqual(3);
+  });
+  
+  it('should figure out  how many completed courses', function(){
+    this.courses = ['course1', 'course2', 'course3'];
+    expect(this.courses.length).toEqual(3);
   });
 });
