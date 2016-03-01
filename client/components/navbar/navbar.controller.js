@@ -14,5 +14,5 @@ class NavbarController {
     }
 }
 
-angular.module('newThingWeAreTestingApp')
+angular.module('studentApp')
   .controller('NavbarController', NavbarController);

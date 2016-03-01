@@ -1,7 +1,7 @@
 (function(angular, undefined) {
 'use strict';
 
-angular.module('newThingWeAreTestingApp.constants', [])
+angular.module('studentApp.constants', [])
 
 .constant('appConfig', {userRoles:['guest','user','admin']})
 

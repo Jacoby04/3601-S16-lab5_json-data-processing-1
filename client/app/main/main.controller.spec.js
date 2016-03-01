@@ -3,7 +3,7 @@
 describe('Controller: MainController', function() {
 
   // load the controller's module
-  beforeEach(module('newThingWeAreTestingApp'));
+  beforeEach(module('studentApp'));
   beforeEach(module('stateMock'));
   beforeEach(module('socketMock'));
 
@@ -25,8 +25,9 @@ describe('Controller: MainController', function() {
     });
   }));
 
-  /*it('should attach a list of things to the controller', function() {
-    $httpBackend.flush();
-    expect(MainController.awesomeThings.length).toBe(4);
-  });*/
+  it('should attach a list of things to the controller', function() {
+    this = {Student.create({"major1": "CSCI", "major2": "MATH"})};
+    this.MainController.combineMajors();
+    expect(this.majors).toEqual("CSCIMATH");
+  });
 });

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('newThingWeAreTestingApp')
+angular.module('studentApp')
   .filter('completedCourses', function () {
 
     var blahBlah = function(studentData){

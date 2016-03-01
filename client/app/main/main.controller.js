@@ -126,7 +126,7 @@ combineMajors(){
     }
     return "";
   }
-  
+
 //creates a string which includes the names of all courses not in-progress
   combineCompletedCourses(){
     var completedCourses = "";
@@ -160,14 +160,9 @@ combineMajors(){
 
         }
       }
-
-
-
-
-
 }
 
-angular.module('newThingWeAreTestingApp')
+angular.module('studentApp')
   .controller('MainController', MainController);
 
 })();

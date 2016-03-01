@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('newThingWeAreTestingApp')
+angular.module('studentApp')
   .directive('footer', function() {
     return {
       templateUrl: 'components/footer/footer.html',

@@ -3,7 +3,7 @@
 describe('Filter: completedCourses', function () {
 
   // load the filter's module
-  beforeEach(module('newThingWeAreTestingApp'));
+  beforeEach(module('studentApp'));
 
   // initialize a new instance of the filter before each test
   var completedCourses;
