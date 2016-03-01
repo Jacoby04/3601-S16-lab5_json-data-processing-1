@@ -52,6 +52,8 @@
           Majors: {{thing.major1}} {{thing.major2}}
           <br>
           <button data-toggle="collapse" data-target="#{{thing.firstName}}">Course History</button>
+            <br>
+            <br>
           <div id="{{thing.firstName}}" class="collapse">
             <li class="col-md-6" ng-repeat="otherThing in thing.courses">
               Course Name: {{otherThing.course.name}}
