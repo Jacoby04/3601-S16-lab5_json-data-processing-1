@@ -12,9 +12,9 @@ your final project.
 - Fork this repository (so that it is easy for us to keep track of your work).
 - Use the generator to generate your project (see below).
 - Make sure your application is called "studentsApp".
-- Move the ``seed.js`` file into your config directory, overwriting the default one. 
+- Move the ``seed.js`` file into your config directory, overwriting the default one.
 - Add `server/config/environment/customerProd.js` to your .gitignore
-- Once you have checked your .gitignore, add all the appropriate generated files to the repository and commit. 
+- Once you have checked your .gitignore, add all the appropriate generated files to the repository and commit.
 
 > Protip: You can add all the files at once by right-clicking the top directory for the project, going to Git>, selecting Add. (or ctrl+alt+A).
 
@@ -43,7 +43,7 @@ Run: ``yo angular-fullstack studentsApp`` in your project's main directory...
 This process is indicated by the progress bar at the bottom of the screen, and you should wait until it is done to try doing any actual work.
 
 #### Using generators to add things to your project
-Do not add routes, views, endpoints, api stuff, or anything else, by hand. Use the documentation for the angular-fullstack generator to see how you can add a route to your project. 
+Do not add routes, views, endpoints, api stuff, or anything else, by hand. Use the documentation for the angular-fullstack generator to see how you can add a route to your project.
 
 > Protip: Read the documentation for the angular-fullstack generator, which can be found in the README.md for the repository containing the generator. It will do A LOT of things for you so you can spend more time playing tetris and less time working.
 
@@ -82,25 +82,25 @@ To keep track of progress on the stories throughout the course of the lab, you w
 
 - As an administrator I would like to display a list of all students, ordered by date of birth.
 
-- As an administrator, I would like to display a list of all students, ordered by the number of credits that they have successfully completed (i.e. excluding the in-progress credits and grade F courses). 
+- As an administrator, I would like to display a list of all students, ordered by the number of credits that they have successfully completed (i.e. excluding the in-progress credits and grade F courses).
 
 - As an administrator I would like to view a list of students based on their major(s).
 
-- As an administrator I would like to view detailed information for an individual student. 
+- As an administrator I would like to view detailed information for an individual student.
 
 - As an administrator, i would like to view all courses that a student has taken or is taking, with grades, including failed courses.
 
-- As an administrator, I would like to display a list of students with their GPA. 
+- As an administrator, I would like to display a list of students with their GPA.
 
-- As an administrator, I would like to display students' status based on their completed courses (freshman, sophomore, junior, senior) and sort/search by these parameters. 
+- As an administrator, I would like to display students' status based on their completed courses (freshman, sophomore, junior, senior) and sort/search by these parameters.
 
-- As an administrator, I would like to search student records based on courses that they are taking or have taken. 
+- As an administrator, I would like to search student records based on courses that they are taking or have taken.
 
 ## Switching to production mode with a remote database
 In their infinite wisdom, your customer has decided to give you access to their live student database in order
 to test your application more thuroughly. In order to set this up in a reasonable way, take the following steps:
 
-The files that need to be modified: 
+The files that need to be modified:
 
 - Starting on line 515 of `Gruntfile.js` change the code block to:
 ```javascript
@@ -137,13 +137,14 @@ The files that need to be modified:
     ]);
   });
 ```
-This will adda  new task `customnerProd` to your grunt tasks, so you will be able to run it from the grunt menu, just like `serve`. 
+This will adda  new task `customnerProd` to your grunt tasks, so you will be able to run it from the grunt menu, just like `serve`.
 - change express.js as follows:
-add `|| 'customerProd === env'` to the if statments on lines 75 and 79
+add `|| 'customerProd' === env` to the if statments on lines 6, 75 and 79
 
 - change the file customerProd.js in `/server/config/environment` to look as follows (but note that the password will be different from `passwordToBeProvided`, it will be provided to you at the beginning of the lab)
-```javascript 
+```javascript
 'use strict';
+module.exports = {
   mongo: {
     uri: 'mongodb://3601Lab:passwordToBeProvided@acrylic/softwareDev/?authSource=admin'
   }
