@@ -25,7 +25,7 @@ describe('Controller: MainController', function() {
     });
   }));
 
-  describe('Student Manipulation logic', function() {
+  describe('Credit field tests.', function() {
     beforeEach( function() {
       MainController.awesomeThings = [{
         "firstName": "Love",
@@ -322,5 +322,5 @@ describe('Controller: MainController', function() {
       expect(MainController.awesomeThings[1].credits).toBe(48);
     });
   });
-  
+
 });
