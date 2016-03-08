@@ -157,163 +157,163 @@ describe('Controller: MainController', function() {
         "major1": "ENGLISH",
         "major2": null
       },
-        {
-          "firstName": "Hilary",
-          "lastName": "Morgan",
-          "dateOfBirth": "1987-01-21",
-          "gender": "female",
-          "email": "hilarymorgan@eweville.com",
-          "phone": "+1 (980) 437-2261",
-          "address": "254 Stoddard Place, Chautauqua, Hawaii, 4930",
-          "courses": [
-            {
-              "course": {
-                "name": "Foundations of Computer Science",
-                "subject": "CSCI",
-                "courseNumber": 1302,
-                "credits": 4
-              },
-              "grade": "A"
+      {
+        "firstName": "Hilary",
+        "lastName": "Morgan",
+        "dateOfBirth": "1987-01-21",
+        "gender": "female",
+        "email": "hilarymorgan@eweville.com",
+        "phone": "+1 (980) 437-2261",
+        "address": "254 Stoddard Place, Chautauqua, Hawaii, 4930",
+        "courses": [
+          {
+            "course": {
+              "name": "Foundations of Computer Science",
+              "subject": "CSCI",
+              "courseNumber": 1302,
+              "credits": 4
             },
-            {
-              "course": {
-                "name": "Models of Computing Systems",
-                "subject": "CSCI",
-                "courseNumber": 3401,
-                "credits": 5
-              },
-              "grade": "D"
+            "grade": "A"
+          },
+          {
+            "course": {
+              "name": "Models of Computing Systems",
+              "subject": "CSCI",
+              "courseNumber": 3401,
+              "credits": 5
             },
-            {
-              "course": {
-                "name": "Software Design and Development",
-                "subject": "CSCI",
-                "courseNumber": 3601,
-                "credits": 5
-              },
-              "grade": "A"
+            "grade": "D"
+          },
+          {
+            "course": {
+              "name": "Software Design and Development",
+              "subject": "CSCI",
+              "courseNumber": 3601,
+              "credits": 5
             },
-            {
-              "course": {
-                "name": "PreCalculus I: Functions",
-                "subject": "MATH",
-                "courseNumber": 1012,
-                "credits": 5
-              },
-              "grade": "D"
+            "grade": "A"
+          },
+          {
+            "course": {
+              "name": "PreCalculus I: Functions",
+              "subject": "MATH",
+              "courseNumber": 1012,
+              "credits": 5
             },
-            {
-              "course": {
-                "name": "PreCalculus II: Trigonometry",
-                "subject": "MATH",
-                "courseNumber": 1013,
-                "credits": 2
-              },
-              "grade": "B"
+            "grade": "D"
+          },
+          {
+            "course": {
+              "name": "PreCalculus II: Trigonometry",
+              "subject": "MATH",
+              "courseNumber": 1013,
+              "credits": 2
             },
-            {
-              "course": {
-                "name": "Calculus III",
-                "subject": "MATH",
-                "courseNumber": 2101,
-                "credits": 4
-              },
-              "grade": "F"
+            "grade": "B"
+          },
+          {
+            "course": {
+              "name": "Calculus III",
+              "subject": "MATH",
+              "courseNumber": 2101,
+              "credits": 4
             },
-            {
-              "course": {
-                "name": "Mathematical Perspectives",
-                "subject": "MATH",
-                "courseNumber": 2202,
-                "credits": 4
-              },
-              "grade": "F"
+            "grade": "F"
+          },
+          {
+            "course": {
+              "name": "Mathematical Perspectives",
+              "subject": "MATH",
+              "courseNumber": 2202,
+              "credits": 4
             },
-            {
-              "course": {
-                "name": "Data Structures",
-                "subject": "CSCI",
-                "courseNumber": 2101,
-                "credits": 5
-              },
-              "grade": "IP"
+            "grade": "F"
+          },
+          {
+            "course": {
+              "name": "Data Structures",
+              "subject": "CSCI",
+              "courseNumber": 2101,
+              "credits": 5
             },
-            {
-              "course": {
-                "name": "Programming and Languages: Human-Computer Interaction and Interface Design",
-                "subject": "CSCI",
-                "courseNumber": 4656,
-                "credits": 4
-              },
-              "grade": "B"
+            "grade": "IP"
+          },
+          {
+            "course": {
+              "name": "Programming and Languages: Human-Computer Interaction and Interface Design",
+              "subject": "CSCI",
+              "courseNumber": 4656,
+              "credits": 4
             },
-            {
-              "course": {
-                "name": "Theory: Quantum Computing",
-                "subject": "CSCI",
-                "courseNumber": 4557,
-                "credits": 4
-              },
-              "grade": "B"
+            "grade": "B"
+          },
+          {
+            "course": {
+              "name": "Theory: Quantum Computing",
+              "subject": "CSCI",
+              "courseNumber": 4557,
+              "credits": 4
             },
-            {
-              "course": {
-                "name": "Beginning French I",
-                "subject": "FREN",
-                "courseNumber": 1001,
-                "credits": 4
-              },
-              "grade": "B"
+            "grade": "B"
+          },
+          {
+            "course": {
+              "name": "Beginning French I",
+              "subject": "FREN",
+              "courseNumber": 1001,
+              "credits": 4
             },
-            {
-              "course": {
-                "name": "Beginning French II",
-                "subject": "FREN",
-                "courseNumber": 1002,
-                "credits": 4
-              },
-              "grade": "IP"
+            "grade": "B"
+          },
+          {
+            "course": {
+              "name": "Beginning French II",
+              "subject": "FREN",
+              "courseNumber": 1002,
+              "credits": 4
             },
-            {
-              "course": {
-                "name": "Intermediate French I",
-                "subject": "FREN",
-                "courseNumber": 2001,
-                "credits": 4
-              },
-              "grade": "A"
+            "grade": "IP"
+          },
+          {
+            "course": {
+              "name": "Intermediate French I",
+              "subject": "FREN",
+              "courseNumber": 2001,
+              "credits": 4
             },
-            {
-              "course": {
-                "name": "Intermediate French II",
-                "subject": "FREN",
-                "courseNumber": 2002,
-                "credits": 4
-              },
-              "grade": "B"
+            "grade": "A"
+          },
+          {
+            "course": {
+              "name": "Intermediate French II",
+              "subject": "FREN",
+              "courseNumber": 2002,
+              "credits": 4
             },
-            {
-              "course": {
-                "name": "Writing for the Liberal Arts",
-                "subject": "ENGL",
-                "courseNumber": 1601,
-                "credits": 4
-              },
-              "grade": "C"
+            "grade": "B"
+          },
+          {
+            "course": {
+              "name": "Writing for the Liberal Arts",
+              "subject": "ENGL",
+              "courseNumber": 1601,
+              "credits": 4
             },
-            {
-              "course": {
-                "name": "Beginning Ceramics",
-                "subject": "ARTS",
-                "courseNumber": 1050,
-                "credits": 3
-              },
-              "grade": "B"
-            }
-          ],
-          "major1": "MATH",
-          "major2": null
-        }]
+            "grade": "C"
+          },
+          {
+            "course": {
+              "name": "Beginning Ceramics",
+              "subject": "ARTS",
+              "courseNumber": 1050,
+              "credits": 3
+            },
+            "grade": "B"
+          }
+        ],
+        "major1": "MATH",
+        "major2": null
+      }]
     });
 
     it('should add a credits field to each student with the number of completed credits.', function() {
@@ -322,19 +322,5 @@ describe('Controller: MainController', function() {
       expect(MainController.awesomeThings[1].credits).toBe(48);
     });
   });
-
-
-
-  // Ignore these.
-  it('should concat two majors', function() {
-    this.major1 = "CSCI";
-    this.major2 = "MATH";
-    this.majors = this.major1 + this.major2;
-    expect(this.majors).toEqual("CSCIMATH");
-  });
-
-  it('should figure out  how many completed courses', function(){
-    this.courses = ['course1', 'course2', 'course3'];
-    expect(this.courses.length).toEqual(3);
-  });
+  
 });
